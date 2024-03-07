@@ -12,7 +12,7 @@ export const App = () => {
       <Alert variant="success">
         Payment received, thank you for your purchase
       </Alert>
-      <Alert variant="warning">
+      <Alert variant="warning" outlined elevated>
         Please update your profile contact information
       </Alert>
     </>
