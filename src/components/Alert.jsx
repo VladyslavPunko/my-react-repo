@@ -1,14 +1,26 @@
-import "./Alert.css";
+import clsx from "clsx";
+import css from "./Alert.module.css";
+import { HiUser } from "react-icons/hi";
 
-export const Alert = ({ variant, children, outlined, elevated }) => {
-  const classNames = ["alert", variant];
+export const Alert = ({ variant, outlined, elevated, children }) => {
+  return (
+    <p
+      className={clsx(css[variant], {
+        [css.isOutlined]: outlined,
+        [css.isElevated]: elevated,
+      })}
+    >
+      {children}
+    </p>
+  );
+};
 
-  if (outlined) {
-    classNames.push("is-outlined");
-  }
-  if (elevated) {
-    classNames.push("is-elevated");
-  }
-
-  return <p className={classNames.join(" ")}>{children}</p>;
+export const UserMenu = ({ name }) => {
+  return (
+    <div>
+      <p>
+        <HiUser className="my-icon" size="40" /> {name}
+      </p>
+    </div>
+  );
 };
