@@ -1,6 +1,9 @@
-/* src/index.css */
-
 body {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
   font-family: sans-serif;
   line-height: 1.5;
 }
@@ -16,12 +19,8 @@ p {
 }
 
 ul,
-ol {
+li {
   margin: 0;
   padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
+  list-style: none;
 }
